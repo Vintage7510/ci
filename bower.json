@@ -17,6 +17,8 @@
   "dependencies": {
     "sb-admin-2": "*",
     "bootstrap": "^3.3.7",
-    "install": "^1.0.4"
+    "install": "^1.0.4",
+    "animate.css": "^3.5.2",
+    "font-awesome": "^4.7.0"
   }
 }
