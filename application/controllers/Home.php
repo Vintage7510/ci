@@ -12,5 +12,7 @@ class Home extends CI_Controller
     {
         print "Hello";
     }
-    
+    public function x(){
+
+    }
 }
