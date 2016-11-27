@@ -12,7 +12,7 @@ admin_view.php<!-- Page Content -->
                     <input class="form-control" name="name" type="text" placeholder="โปรกรอกชื่อหมวดหมู่" required>
 
                 </div>
-                <button type="submit" class="btn btn-success"><i class="fa fa-save"></i> เพิ่มหมวดหมู่</button>
+                <button type="submit" class="btn btn-success"><i class="fa fa-save"></i> บันทึก</button>
             </form>
         </div>
         <!-- /.row -->
