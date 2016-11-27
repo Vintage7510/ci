@@ -17,7 +17,7 @@ class category_model extends CI_Model
         $data = array(
             'name' => $name
         );
-        $this->db->insert('categoryies',$data);
+        $this->db->insert('categories',$data);
     }
 
 }

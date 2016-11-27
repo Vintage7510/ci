@@ -10,7 +10,8 @@ class Admin extends CI_Controller
 {
     public  function __construct()
     {
-        $this->load->model(category_model);
+        parent::__construct();
+        $this->load->model('category_model');
     }
 
     public function index()
@@ -23,10 +24,11 @@ class Admin extends CI_Controller
 
     public function category()
     {
-        $catrgories = $this->vategory_model->getCategory();
+        $data = array('categories' => $this->category_model->getCategory());
+
         $this->load->view('admin/layout/admin_header_view');
         $this->load->view('admin/layout/admin_sidebar_view');
-        $this->load->view('admin/category_view');
+        $this->load->view('admin/category_view',$data);
         $this->load->view('admin/layout/admin_footer_view');
     }
 

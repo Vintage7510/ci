@@ -18,15 +18,25 @@ admin_view.php<!-- Page Content -->
                     <th>ชื่อหมวดหมู่</th>
                     <th>จัดการ</th>
                 </tr>
+                <?php if($categories->num_rows() >0) {
+                    foreach ($categories->result() as $category){
+                    ?>
                 <tr>
                     <td>1</td>
-                    <td>กีฬา</td>
+                    <td><?php print $category->name ?></td>
+
                     <td>
+
                         <a href="#" class="btn btn-sm btn-warning"><i class="fa fa-edit"></i> แก้ไข</a>
                         <a href="#" class="btn btn-sm btn-danger"><i class="fa fa-recycle"></i> ลบ</a>
                     </td>
 
                 </tr>
+                <?php }}else{ ?>
+                <tr>
+                    <td colspan="3" >== ไม่มีข้อมูล ==</td>
+                </tr>
+                <?php }?>
             </div>
         </table>
     </div>
