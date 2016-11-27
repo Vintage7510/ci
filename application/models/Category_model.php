@@ -26,12 +26,19 @@ class category_model extends CI_Model
         return $this->db->get('categories');
     }
 
-    public function updateCategory($category_id)
+    public function updateCategory($category_id, $name)
     {
         $data = array(
-            'name' => name
+            'name' => $name
         );
         $this->db->where('category_id',$category_id);
+        return $this->db->update('categories', $data);
+    }
+
+    public function deleteCategoryByID($category_id)
+    {
+        $this->db->where('category_id',$category_id);
+        return $this->db->delete('categories');
     }
 
 }

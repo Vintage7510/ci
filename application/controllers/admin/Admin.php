@@ -60,7 +60,8 @@ class Admin extends CI_Controller
 
     public function delete_category($category_id)
     {
-        $this->category_model
+        $this->category_model->deleteCategoryByID($category_id);
+        redirect(base_url('admin/category'));
     }
 
     public function update_category($category_id)
