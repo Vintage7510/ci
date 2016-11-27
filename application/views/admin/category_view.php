@@ -27,8 +27,9 @@ admin_view.php<!-- Page Content -->
 
                     <td>
 
-                        <a href="#" class="btn btn-sm btn-warning"><i class="fa fa-edit"></i> แก้ไข</a>
-                        <a href="#" class="btn btn-sm btn-danger"><i class="fa fa-recycle"></i> ลบ</a>
+                        <a href="<?php print base_url('admin/edit_category/'.$category->category_id)?>" class="btn btn-sm btn-warning"><i class="fa fa-edit"></i> แก้ไข</a>
+                        <a href="<?php print base_url('admin/delete_category'.$category->category_id)?>" class="btn btn-sm btn-danger"><i
+                                onclick="return confirm('แน่ใจรึปล่าว');"class="fa fa-recycle"></i> ลบ</a>
                     </td>
 
                 </tr>
